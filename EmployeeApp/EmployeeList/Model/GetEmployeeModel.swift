@@ -1,5 +1,5 @@
 //
-//  EmployeeModel.swift
+//  GetEmployeeModel.swift
 //  EmployeeApp
 //
 //  Created by Nikhil Wagh on 12/05/20.

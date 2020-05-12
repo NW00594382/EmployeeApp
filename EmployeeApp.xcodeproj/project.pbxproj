@@ -15,13 +15,13 @@
 		521B7600246ADF3D002C644E /* EmployeeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B75FF246ADF3D002C644E /* EmployeeAppUITests.swift */; };
 		76882718246AE03500C18747 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882717246AE03500C18747 /* Constants.swift */; };
 		7688271A246AE05E00C18747 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882719246AE05E00C18747 /* UIColor+Extension.swift */; };
-		7688271C246AE0B100C18747 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688271B246AE0B100C18747 /* EmployeeListViewController.swift */; };
-		76882720246AE22400C18747 /* EmployeeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688271F246AE22400C18747 /* EmployeeListCell.swift */; };
-		76882722246AEC8500C18747 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882721246AEC8500C18747 /* EmployeeListViewModel.swift */; };
-		76882724246AEC9700C18747 /* AddEmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882723246AEC9700C18747 /* AddEmployeeViewModel.swift */; };
 		76882726246AECAB00C18747 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882725246AECAB00C18747 /* Service.swift */; };
-		76882728246AECDF00C18747 /* EmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882727246AECDF00C18747 /* EmployeeModel.swift */; };
-		7688272A246AECFF00C18747 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882729246AECFF00C18747 /* AddEmployeeViewController.swift */; };
+		76882734246AF14900C18747 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882733246AF14900C18747 /* EmployeesViewController.swift */; };
+		76882736246AF15F00C18747 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882735246AF15F00C18747 /* AddEmployeeViewController.swift */; };
+		76882738246AF17800C18747 /* AddEmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882737246AF17800C18747 /* AddEmployeeViewModel.swift */; };
+		7688273A246AF18B00C18747 /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882739246AF18B00C18747 /* EmployeesViewModel.swift */; };
+		7688273E246AF4B000C18747 /* CreateEmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688273D246AF4B000C18747 /* CreateEmployeeModel.swift */; };
+		76882740246AF4DE00C18747 /* GetEmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688273F246AF4DE00C18747 /* GetEmployeeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +56,13 @@
 		521B7601246ADF3D002C644E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76882717246AE03500C18747 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76882719246AE05E00C18747 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		7688271B246AE0B100C18747 /* EmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
-		7688271F246AE22400C18747 /* EmployeeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListCell.swift; sourceTree = "<group>"; };
-		76882721246AEC8500C18747 /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
-		76882723246AEC9700C18747 /* AddEmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewModel.swift; sourceTree = "<group>"; };
 		76882725246AECAB00C18747 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		76882727246AECDF00C18747 /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
-		76882729246AECFF00C18747 /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
+		76882733246AF14900C18747 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
+		76882735246AF15F00C18747 /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
+		76882737246AF17800C18747 /* AddEmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewModel.swift; sourceTree = "<group>"; };
+		76882739246AF18B00C18747 /* EmployeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
+		7688273D246AF4B000C18747 /* CreateEmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeModel.swift; sourceTree = "<group>"; };
+		7688273F246AF4DE00C18747 /* GetEmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmployeeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +113,11 @@
 		521B75DE246ADF36002C644E /* EmployeeApp */ = {
 			isa = PBXGroup;
 			children = (
-				76882716246ADFB600C18747 /* Model */,
-				76882715246ADFAF00C18747 /* View */,
-				76882714246ADFAC00C18747 /* ViewModel */,
+				7688272B246AF05100C18747 /* EmployeeList */,
+				7688272C246AF06700C18747 /* AddEmployee */,
 				76882713246ADFA700C18747 /* Service */,
 				76882712246ADFA200C18747 /* Utility */,
+				521B75E3246ADF36002C644E /* Main.storyboard */,
 				521B75DF246ADF36002C644E /* AppDelegate.swift */,
 				521B75E6246ADF3D002C644E /* Assets.xcassets */,
 				521B75E8246ADF3D002C644E /* LaunchScreen.storyboard */,
@@ -161,48 +161,72 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		76882714246ADFAC00C18747 /* ViewModel */ = {
+		7688272B246AF05100C18747 /* EmployeeList */ = {
 			isa = PBXGroup;
 			children = (
-				76882721246AEC8500C18747 /* EmployeeListViewModel.swift */,
-				76882723246AEC9700C18747 /* AddEmployeeViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		76882715246ADFAF00C18747 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7688271D246AE1B500C18747 /* EmployeeList */,
-				7688271E246AE1E400C18747 /* AddEmployee */,
-				521B75E3246ADF36002C644E /* Main.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		76882716246ADFB600C18747 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				76882727246AECDF00C18747 /* EmployeeModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7688271D246AE1B500C18747 /* EmployeeList */ = {
-			isa = PBXGroup;
-			children = (
-				7688271B246AE0B100C18747 /* EmployeeListViewController.swift */,
-				7688271F246AE22400C18747 /* EmployeeListCell.swift */,
+				7688272F246AF09700C18747 /* Model */,
+				7688272E246AF09300C18747 /* View */,
+				7688272D246AF08800C18747 /* ViewModel */,
 			);
 			path = EmployeeList;
 			sourceTree = "<group>";
 		};
-		7688271E246AE1E400C18747 /* AddEmployee */ = {
+		7688272C246AF06700C18747 /* AddEmployee */ = {
 			isa = PBXGroup;
 			children = (
-				76882729246AECFF00C18747 /* AddEmployeeViewController.swift */,
+				76882732246AF0CB00C18747 /* Model */,
+				76882731246AF0C600C18747 /* View */,
+				76882730246AF0C000C18747 /* ViewModel */,
 			);
 			path = AddEmployee;
+			sourceTree = "<group>";
+		};
+		7688272D246AF08800C18747 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				76882739246AF18B00C18747 /* EmployeesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7688272E246AF09300C18747 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76882733246AF14900C18747 /* EmployeesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7688272F246AF09700C18747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7688273F246AF4DE00C18747 /* GetEmployeeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76882730246AF0C000C18747 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				76882737246AF17800C18747 /* AddEmployeeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		76882731246AF0C600C18747 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76882735246AF15F00C18747 /* AddEmployeeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76882732246AF0CB00C18747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7688273D246AF4B000C18747 /* CreateEmployeeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,15 +360,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76882728246AECDF00C18747 /* EmployeeModel.swift in Sources */,
-				76882720246AE22400C18747 /* EmployeeListCell.swift in Sources */,
+				76882736246AF15F00C18747 /* AddEmployeeViewController.swift in Sources */,
 				76882726246AECAB00C18747 /* Service.swift in Sources */,
-				7688271C246AE0B100C18747 /* EmployeeListViewController.swift in Sources */,
-				7688272A246AECFF00C18747 /* AddEmployeeViewController.swift in Sources */,
+				7688273A246AF18B00C18747 /* EmployeesViewModel.swift in Sources */,
 				521B75E0246ADF36002C644E /* AppDelegate.swift in Sources */,
-				76882724246AEC9700C18747 /* AddEmployeeViewModel.swift in Sources */,
+				7688273E246AF4B000C18747 /* CreateEmployeeModel.swift in Sources */,
+				76882738246AF17800C18747 /* AddEmployeeViewModel.swift in Sources */,
 				76882718246AE03500C18747 /* Constants.swift in Sources */,
-				76882722246AEC8500C18747 /* EmployeeListViewModel.swift in Sources */,
+				76882740246AF4DE00C18747 /* GetEmployeeModel.swift in Sources */,
+				76882734246AF14900C18747 /* EmployeesViewController.swift in Sources */,
 				7688271A246AE05E00C18747 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
