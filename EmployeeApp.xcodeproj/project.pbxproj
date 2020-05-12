@@ -22,6 +22,7 @@
 		7688273A246AF18B00C18747 /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882739246AF18B00C18747 /* EmployeesViewModel.swift */; };
 		7688273E246AF4B000C18747 /* CreateEmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688273D246AF4B000C18747 /* CreateEmployeeModel.swift */; };
 		76882740246AF4DE00C18747 /* GetEmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688273F246AF4DE00C18747 /* GetEmployeeModel.swift */; };
+		76882742246AF8FF00C18747 /* EmployeesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882741246AF8FF00C18747 /* EmployeesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		76882739246AF18B00C18747 /* EmployeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
 		7688273D246AF4B000C18747 /* CreateEmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeModel.swift; sourceTree = "<group>"; };
 		7688273F246AF4DE00C18747 /* GetEmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmployeeModel.swift; sourceTree = "<group>"; };
+		76882741246AF8FF00C18747 /* EmployeesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				76882733246AF14900C18747 /* EmployeesViewController.swift */,
+				76882741246AF8FF00C18747 /* EmployeesCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				76882740246AF4DE00C18747 /* GetEmployeeModel.swift in Sources */,
 				76882734246AF14900C18747 /* EmployeesViewController.swift in Sources */,
 				7688271A246AE05E00C18747 /* UIColor+Extension.swift in Sources */,
+				76882742246AF8FF00C18747 /* EmployeesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

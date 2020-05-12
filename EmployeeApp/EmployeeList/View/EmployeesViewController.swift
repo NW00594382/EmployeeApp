@@ -9,22 +9,56 @@
 import UIKit
 
 class EmployeesViewController: UIViewController {
-
+    
+    //MARK: - Outlets
+    @IBOutlet weak var employeeTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.themeColor
+        self.employeeTableView.backgroundColor = UIColor.themeColor
+
     }
     
+    //MARK: - Private methods
+    
+    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//MARK: - UITableView Delegate
+extension EmployeesViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let employeeCell = tableView.dequeueReusableCell(withIdentifier: "EmployeeCell", for: indexPath) as? EmployeesCell else { return EmployeesCell() }
+        
+        employeeCell.employeeNameLabel.text = "Nikhil Wagh"
+        employeeCell.employeeAgeLabel.text = "29 years"
+        employeeCell.employeeSalaryLabel.text = "10,000"
+        
+        return employeeCell
+    }
+    
+    
+}
 
+//MARK: - UISearchBar Delegate
+
+extension EmployeesViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
 }
