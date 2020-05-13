@@ -16,16 +16,24 @@ class EmployeesCell: UITableViewCell {
     @IBOutlet weak var employeeAgeLabel: UILabel!
     @IBOutlet weak var employeeSalaryLabel: UILabel!
     
+    //MARK: - Initializers
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         contentView.backgroundColor = UIColor.themeColor
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+    //MARK: - Private methods
     
+    /// This method is to configure cell
+    /// - Parameters:
+    ///   - viewModel: This parameter is to access employeesArray from ViewModel
+    ///   - indexPath: IndexPath of tableView to display perticular row info
+    func configureCell(viewModel: EmployeesViewModel, indexPath: IndexPath) {
+        let employee = viewModel.employeesArray[indexPath.row]
+        employeeImageView.imageFromServerURL(employee.profileImage, placeHolder: #imageLiteral(resourceName: "placeholder"))
+        employeeNameLabel.text = employee.employeeName
+        employeeAgeLabel.text = "\(employee.employeeAge) years"
+        employeeSalaryLabel.text = employee.employeeSalary
+    }
 }

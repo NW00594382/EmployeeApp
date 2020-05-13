@@ -11,10 +11,10 @@ import Foundation
 struct Constants {
     
     struct BaseURL {
-        static let url = "https:dl.dropboxusercontent.com"
+        static let url = "http://dummy.restapiexample.com"
     }
     struct API {
-        static let facts = "/s/2iodh4vg0eortkl/facts.json"
+        static let getEmployees = "/api/v1/employees"
     }
     
     static let cellIdentifier = "FactsTableViewCell"
