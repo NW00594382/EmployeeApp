@@ -12,6 +12,7 @@ class EmployeesViewModel {
     
     //MARK: - Parameters
     
+    var originalArray = [Employee]()
     var employeesArray = [Employee]()
     var searchedArray = [Employee]()
     
@@ -22,12 +23,23 @@ class EmployeesViewModel {
             DispatchQueue.main.async {
                 switch(result) {
                 case .success(let result):
-                    self.employeesArray = result.data
+                    self.originalArray = result.data
+                    self.employeesArray = self.originalArray
                     completion(.success(true))
                 case .failure(let error):
                     completion(.failure(error))
                 }
             }
         }
+    }
+    
+    func searchEmployee(with searchText: String, completion: @escaping () -> Void) {
+        if !searchText.isEmpty {
+            searchedArray = self.originalArray
+            self.employeesArray = searchedArray.filter({ $0.employeeName.lowercased().contains(searchText.lowercased())})
+        } else {
+            self.employeesArray = self.originalArray
+        }
+        completion()
     }
 }

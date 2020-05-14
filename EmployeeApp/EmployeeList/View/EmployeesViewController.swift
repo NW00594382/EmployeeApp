@@ -27,6 +27,8 @@ class EmployeesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getEmployees()
+        searchBar.text = ""
+        dismissKeyboard()
     }
     
     //MARK: - Private Methods
@@ -60,6 +62,12 @@ class EmployeesViewController: UIViewController {
             }
         }
     }
+    
+    func dismissKeyboard() {
+        DispatchQueue.main.async {
+            self.searchBar.resignFirstResponder()
+        }
+    }
 }
 
 //MARK: - UITableView Delegate
@@ -82,6 +90,10 @@ extension EmployeesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
+            self.employeeTableView.beginUpdates()
+            self.employeeVM.employeesArray.remove(at: indexPath.row)
+            self.employeeTableView.deleteRows(at: [indexPath], with: .right)
+            self.employeeTableView.endUpdates()
         }
     }
 }
@@ -90,11 +102,20 @@ extension EmployeesViewController: UITableViewDataSource {
 
 extension EmployeesViewController: UISearchBarDelegate {
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        return true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        dismissKeyboard()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        employeeVM.searchEmployee(with: searchText) {
+            self.employeeTableView.reloadData()
+            if searchText.isEmpty {
+                self.dismissKeyboard()
+            }
+        }
     }
 }
