@@ -13,6 +13,7 @@
 		521B75EA246ADF3D002C644E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521B75E8246ADF3D002C644E /* LaunchScreen.storyboard */; };
 		521B75F5246ADF3D002C644E /* EmployeeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B75F4246ADF3D002C644E /* EmployeeAppTests.swift */; };
 		521B7600246ADF3D002C644E /* EmployeeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B75FF246ADF3D002C644E /* EmployeeAppUITests.swift */; };
+		521B7617246D4D4F00FCC154 /* DeleteEmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B7616246D4D4F00FCC154 /* DeleteEmployeeModel.swift */; };
 		76882718246AE03500C18747 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882717246AE03500C18747 /* Constants.swift */; };
 		7688271A246AE05E00C18747 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882719246AE05E00C18747 /* UIColor+Extension.swift */; };
 		76882726246AECAB00C18747 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882725246AECAB00C18747 /* Service.swift */; };
@@ -56,6 +57,7 @@
 		521B75FB246ADF3D002C644E /* EmployeeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		521B75FF246ADF3D002C644E /* EmployeeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAppUITests.swift; sourceTree = "<group>"; };
 		521B7601246ADF3D002C644E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521B7616246D4D4F00FCC154 /* DeleteEmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteEmployeeModel.swift; sourceTree = "<group>"; };
 		76882717246AE03500C18747 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76882719246AE05E00C18747 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		76882725246AECAB00C18747 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				76882743246BB2AD00C18747 /* EmployeeModel.swift */,
+				521B7616246D4D4F00FCC154 /* DeleteEmployeeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				76882726246AECAB00C18747 /* Service.swift in Sources */,
 				7688273A246AF18B00C18747 /* EmployeesViewModel.swift in Sources */,
 				521B75E0246ADF36002C644E /* AppDelegate.swift in Sources */,
+				521B7617246D4D4F00FCC154 /* DeleteEmployeeModel.swift in Sources */,
 				7688273E246AF4B000C18747 /* CreateEmployeeModel.swift in Sources */,
 				76882738246AF17800C18747 /* AddEmployeeViewModel.swift in Sources */,
 				76882746246BB7B500C18747 /* UIImageView+Extension.swift in Sources */,

@@ -56,9 +56,7 @@ class EmployeesViewController: UIViewController {
                 self.activityView?.stopAnimating()
                 self.employeeTableView.reloadData()
             case .failure(let error):
-                let alert = UIAlertController(title: Constants.errorTitle, message: error.localizedDescription , preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: Constants.ok, style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                self.showAlert(message: error.localizedDescription, action: UIAlertAction(title: Constants.ok, style: .default, handler: nil))
             }
         }
     }
@@ -67,6 +65,12 @@ class EmployeesViewController: UIViewController {
         DispatchQueue.main.async {
             self.searchBar.resignFirstResponder()
         }
+    }
+    
+    func showAlert(message: String, action: UIAlertAction) {
+        let alert = UIAlertController(title: Constants.errorTitle, message: message, preferredStyle: .alert)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -79,7 +83,7 @@ extension EmployeesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let employeeCell = tableView.dequeueReusableCell(withIdentifier: "EmployeeCell", for: indexPath) as? EmployeesCell else { return EmployeesCell() }
+        guard let employeeCell = tableView.dequeueReusableCell(withIdentifier: Constants.employeeCell, for: indexPath) as? EmployeesCell else { return EmployeesCell() }
         employeeCell.configureCell(viewModel: employeeVM, indexPath: indexPath)
         return employeeCell
     }
@@ -90,10 +94,25 @@ extension EmployeesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            self.employeeTableView.beginUpdates()
-            self.employeeVM.employeesArray.remove(at: indexPath.row)
-            self.employeeTableView.deleteRows(at: [indexPath], with: .right)
-            self.employeeTableView.endUpdates()
+            activityView?.startAnimating()
+            let employee = employeeVM.employeesArray[indexPath.row]
+            employeeVM.deleteEmployee(employeeID: Int(employee.id) ?? 0) { (result) in
+                self.activityView?.stopAnimating()
+                switch(result) {
+                case .success(let result):
+                    if result.status == Constants.success {
+                        self.employeeTableView.beginUpdates()
+                        self.employeeVM.employeesArray.remove(at: indexPath.row)
+                        self.employeeTableView.deleteRows(at: [indexPath], with: .fade)
+                        self.employeeTableView.endUpdates()
+                    } else {
+                        self.showAlert(message: result.message, action: UIAlertAction(title: Constants.ok, style: .default, handler: nil))
+                    }
+                    
+                case .failure(let error):
+                    self.showAlert(message: error.localizedDescription, action: UIAlertAction(title: Constants.ok, style: .default, handler: nil))
+                }
+            }
         }
     }
 }

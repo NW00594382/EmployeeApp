@@ -15,18 +15,16 @@ struct Constants {
     }
     struct API {
         static let getEmployees = "/api/v1/employees"
+        static let createEmployee = "/api/v1/create"
+        static let deleteEmployee = "/api/v1/delete"
     }
     
-    static let cellIdentifier = "FactsTableViewCell"
     static let errorTitle = "Error"
     static let ok = "OK"
-    static let customFontBold = "Helvetica-bold"
-    static let customFont = "Helvetica"
-    static let titleFontSize = 18.0
-    static let descFontSize = 16.0
-    static let imageViewHeight = 90.0
-    static let imageViewWidth = 90.0
-    static let zero = 0.0
-    static let heightConstant = 60.0
-    
+    static let applicationJson = "application/json"
+    static let contentType = "Content-Type"
+    static let post = "POST"
+    static let delete = "DELETE"
+    static let success = "success"
+    static let employeeCell = "EmployeeCell"
 }

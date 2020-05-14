@@ -18,6 +18,18 @@ class EmployeesViewModel {
     
     //MARK: - Private Methods
     
+    func searchEmployee(with searchText: String, completion: @escaping () -> Void) {
+        if !searchText.isEmpty {
+            searchedArray = self.originalArray
+            self.employeesArray = searchedArray.filter({ $0.employeeName.lowercased().contains(searchText.lowercased())})
+        } else {
+            self.employeesArray = self.originalArray
+        }
+        completion()
+    }
+    
+    //MARK: - API
+    
     func getEmployeeData(completion: @escaping (Result<Bool, Error>) -> Void) {
         Service.sharedInstance.getEmployeeAPIData { (result) in
             DispatchQueue.main.async {
@@ -33,13 +45,16 @@ class EmployeesViewModel {
         }
     }
     
-    func searchEmployee(with searchText: String, completion: @escaping () -> Void) {
-        if !searchText.isEmpty {
-            searchedArray = self.originalArray
-            self.employeesArray = searchedArray.filter({ $0.employeeName.lowercased().contains(searchText.lowercased())})
-        } else {
-            self.employeesArray = self.originalArray
+    func deleteEmployee(employeeID: Int, completion: @escaping (Result<DeleteEmployeeModel, Error>) -> Void) {
+        Service.sharedInstance.deleteEmployeeAPI(employeeID: employeeID) { (result) in
+            DispatchQueue.main.async {
+                switch(result) {
+                case .success(let result):
+                    completion(.success(result))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
         }
-        completion()
     }
 }
