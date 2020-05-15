@@ -27,6 +27,7 @@ struct Service {
                 let jsonString = String(decoding: data, as: UTF8.self)
                 do {
                     let results = try JSONDecoder().decode(EmployeeModel.self, from: jsonString.data(using: .utf8)!)
+                    print("employees count: \(results.data.count)")
                     completion(.success(results))
                 } catch {
                     print(error.localizedDescription)

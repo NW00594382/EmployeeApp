@@ -18,7 +18,6 @@ struct Constants {
         static let createEmployee = "/api/v1/create"
         static let deleteEmployee = "/api/v1/delete"
     }
-    
     static let errorTitle = "Error"
     static let ok = "OK"
     static let applicationJson = "application/json"
@@ -27,4 +26,7 @@ struct Constants {
     static let delete = "DELETE"
     static let success = "success"
     static let employeeCell = "EmployeeCell"
+    static let employeeNameError = "Please enter employee name."
+    static let employeeAgeError = "Employee age is incorrect. Please enter valid value."
+    static let employeeSalaryError = "Employee salary is incorrect. Please enter valid value."
 }

@@ -51,9 +51,9 @@ class EmployeesViewController: UIViewController {
     func getEmployees() {
         activityView?.startAnimating()
         employeeVM.getEmployeeData { result in
+            self.activityView?.stopAnimating()
             switch(result) {
             case .success:
-                self.activityView?.stopAnimating()
                 self.employeeTableView.reloadData()
             case .failure(let error):
                 self.showAlert(message: error.localizedDescription, action: UIAlertAction(title: Constants.ok, style: .default, handler: nil))

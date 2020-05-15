@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Hf-Yh-DDF">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Hf-Yh-DDF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Enter employee name..." translatesAutoresizingMaskIntoConstraints="NO" id="g2G-qH-68Y">
-                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -28,10 +29,10 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fYy-0r-eIl">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmployeeCell" id="bfA-4q-Ouy" customClass="EmployeesCell" customModule="EmployeeApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmployeeCell" id="bfA-4q-Ouy" customClass="EmployeesCell" customModule="EmployeeApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bfA-4q-Ouy" id="kLy-8W-Hca">
@@ -73,7 +74,7 @@
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nikhil wagh" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPm-nV-Jf2">
                                                                                     <rect key="frame" x="70" y="0.0" width="155" height="30"/>
-                                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -103,7 +104,7 @@
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29 years" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DT-nF-eZj">
                                                                                     <rect key="frame" x="70" y="0.0" width="155" height="30"/>
-                                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -133,7 +134,7 @@
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20,000" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxv-Cd-uxq">
                                                                                     <rect key="frame" x="70" y="0.0" width="155" height="30"/>
-                                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -235,14 +236,143 @@
                     <view key="view" contentMode="scaleToFill" id="Umc-VX-Mfu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2qp-Ge-0OE">
+                                <rect key="frame" x="15" y="79" width="345" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8K-ln-goI">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="55"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJw-ym-8V0">
+                                                <rect key="frame" x="30" y="10" width="285" height="35"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="next"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="wm4-ye-BUs" id="u9b-CM-jkg"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="eJw-ym-8V0" firstAttribute="leading" secondItem="g8K-ln-goI" secondAttribute="leading" constant="30" id="8ar-2z-sDc"/>
+                                            <constraint firstAttribute="trailing" secondItem="eJw-ym-8V0" secondAttribute="trailing" constant="30" id="hN8-ai-iib"/>
+                                            <constraint firstAttribute="bottom" secondItem="eJw-ym-8V0" secondAttribute="bottom" constant="10" id="qDy-2J-OVm"/>
+                                            <constraint firstItem="eJw-ym-8V0" firstAttribute="top" secondItem="g8K-ln-goI" secondAttribute="top" constant="10" id="rEX-0q-3nW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33W-KZ-e8F">
+                                        <rect key="frame" x="0.0" y="65" width="345" height="55"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter age..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFR-K0-Omj">
+                                                <rect key="frame" x="30" y="10" width="285" height="35"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="wm4-ye-BUs" id="xze-CH-Snm"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="kFR-K0-Omj" firstAttribute="leading" secondItem="33W-KZ-e8F" secondAttribute="leading" constant="30" id="D6S-4l-7si"/>
+                                            <constraint firstItem="kFR-K0-Omj" firstAttribute="top" secondItem="33W-KZ-e8F" secondAttribute="top" constant="10" id="cqk-ec-5g3"/>
+                                            <constraint firstAttribute="bottom" secondItem="kFR-K0-Omj" secondAttribute="bottom" constant="10" id="xPN-Ig-dvK"/>
+                                            <constraint firstAttribute="trailing" secondItem="kFR-K0-Omj" secondAttribute="trailing" constant="30" id="zC4-WN-C5D"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUn-I3-cGn">
+                                        <rect key="frame" x="0.0" y="130" width="345" height="55"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter salary..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rff-Mk-rrT">
+                                                <rect key="frame" x="30" y="10" width="285" height="35"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="wm4-ye-BUs" id="RAS-OY-Tl4"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Rff-Mk-rrT" secondAttribute="trailing" constant="30" id="2GH-XV-bwK"/>
+                                            <constraint firstItem="Rff-Mk-rrT" firstAttribute="leading" secondItem="cUn-I3-cGn" secondAttribute="leading" constant="30" id="OjR-hN-82v"/>
+                                            <constraint firstItem="Rff-Mk-rrT" firstAttribute="top" secondItem="cUn-I3-cGn" secondAttribute="top" constant="10" id="fMc-cx-uLV"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rff-Mk-rrT" secondAttribute="bottom" constant="10" id="zax-aZ-kIu"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifC-F4-dbJ">
+                                        <rect key="frame" x="0.0" y="195" width="345" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLM-W0-TZF">
+                                                <rect key="frame" x="97.5" y="5" width="150" height="45"/>
+                                                <color key="backgroundColor" red="0.29408899649999998" green="1" blue="0.23737765860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="IvD-Al-oHB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Submit"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitAction:" destination="wm4-ye-BUs" eventType="touchUpInside" id="ABR-2A-HQn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="qLM-W0-TZF" firstAttribute="top" secondItem="ifC-F4-dbJ" secondAttribute="top" constant="5" id="3NN-aU-wy1"/>
+                                            <constraint firstAttribute="bottom" secondItem="qLM-W0-TZF" secondAttribute="bottom" constant="5" id="jYy-Er-Is8"/>
+                                            <constraint firstItem="qLM-W0-TZF" firstAttribute="centerX" secondItem="ifC-F4-dbJ" secondAttribute="centerX" id="o7i-bY-C5s"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="QEg-Cq-mRg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2qp-Ge-0OE" firstAttribute="top" secondItem="SXS-58-OVe" secondAttribute="top" constant="15" id="Auy-dS-jeO"/>
+                            <constraint firstItem="2qp-Ge-0OE" firstAttribute="leading" secondItem="SXS-58-OVe" secondAttribute="leading" constant="15" id="ZIy-aR-hDH"/>
+                            <constraint firstItem="SXS-58-OVe" firstAttribute="trailing" secondItem="2qp-Ge-0OE" secondAttribute="trailing" constant="15" id="lxC-0M-572"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SXS-58-OVe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Employee" id="VCc-Wn-4Gp"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="kFR-K0-Omj" id="nNL-lF-NKq"/>
+                        <outlet property="nameTextField" destination="eJw-ym-8V0" id="vY0-LS-5Yy"/>
+                        <outlet property="salaryTextField" destination="Rff-Mk-rrT" id="doZ-Xh-TNF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziG-Xt-bJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="107"/>
+            <point key="canvasLocation" x="1805.5999999999999" y="106.59670164917542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nOP-HB-v0f">
@@ -250,7 +380,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Hf-Yh-DDF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NQI-dc-GvT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
