@@ -8,6 +8,17 @@
 
 import Foundation
 
+//MARK: - ENUMS
+
+enum RequestType: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case deleta = "DELETE"
+}
+
+//MARK: - CONSTANTS
+
 struct Constants {
     
     struct BaseURL {
@@ -22,11 +33,11 @@ struct Constants {
     static let ok = "OK"
     static let applicationJson = "application/json"
     static let contentType = "Content-Type"
-    static let post = "POST"
-    static let delete = "DELETE"
     static let success = "success"
     static let employeeCell = "EmployeeCell"
-    static let employeeNameError = "Please enter employee name."
-    static let employeeAgeError = "Employee age is incorrect. Please enter valid value."
-    static let employeeSalaryError = "Employee salary is incorrect. Please enter valid value."
+    static let employeeNameError = "Please enter Name."
+    static let employeeAgeEmptyError = "Please enter Age."
+    static let employeeAgeError = "Please enter valid Age."
+    static let employeeSalaryEmptyError = "Please enter Salary."
+    static let employeeSalaryError = "Please enter valid Salary."
 }

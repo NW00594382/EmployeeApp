@@ -12,41 +12,52 @@ struct Service {
     
     static let sharedInstance = Service()
     
-    //MARK:- GET
-    /// This method is to GET facts data from API
-    /// - Parameter completion: Result parameter is to return Success or Failure
+    //MARK:- API's calls
+    
+    /// This method is to get Employees
     func getEmployeeAPIData(completion: @escaping (Result<EmployeeModel, Error>) -> Void) {
         let urlString = "\(Constants.BaseURL.url)\(Constants.API.getEmployees)"
-        guard let serviceURL = URL.init(string: urlString) else { return }
-        URLSession.shared.dataTask(with: serviceURL) { (data, response, error) in
-            if let err = error {
-                completion(.failure(err))
-                print(err.localizedDescription)
-            } else {
-                guard let data = data else { return }
-                let jsonString = String(decoding: data, as: UTF8.self)
-                do {
-                    let results = try JSONDecoder().decode(EmployeeModel.self, from: jsonString.data(using: .utf8)!)
-                    print("employees count: \(results.data.count)")
-                    completion(.success(results))
-                } catch {
-                    print(error.localizedDescription)
-                    completion(.failure(error))
-                }
+        getRequest(requestUrl: URL(string: urlString)!, resultType: EmployeeModel.self) { result in
+            switch(result) {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                completion(.failure(error))
             }
-            }.resume()
+        }
     }
     
-    //MARK: - POST
+    /// This method is to Create New Employee
     func createEployeeAPI(employee: NewEmployee, completion: @escaping (Result<CreateEmployeeModel, Error>) -> Void) {
         let urlString = "\(Constants.BaseURL.url)\(Constants.API.createEmployee)"
-        guard let serviceURL = URL.init(string: urlString) else { return }
-        var request = URLRequest(url: serviceURL)
-        request.httpMethod = Constants.post
-        request.addValue(Constants.applicationJson, forHTTPHeaderField: Constants.contentType)
         guard let body = try? JSONEncoder().encode(employee) else { return }
-        request.httpBody = body
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        postRequest(requestUrl: URL(string: urlString)!, requestBody: body, resultType: CreateEmployeeModel.self) { result in
+            switch(result) {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    /// This method is to delete Employee
+    func deleteEmployeeAPI(employeeID: Int, completion: @escaping (Result<DeleteEmployeeModel, Error>) -> Void) {
+        let urlString = "\(Constants.BaseURL.url)\(Constants.API.deleteEmployee)/\(employeeID)"
+        getRequest(requestUrl: URL(string: urlString)!, resultType: DeleteEmployeeModel.self) { result in
+            switch(result) {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    //MARK: - API CLIENT
+    
+    private func getRequest<T: Decodable>(requestUrl: URL, resultType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+        URLSession.shared.dataTask(with: requestUrl) { (data, response, error) in
             if let err = error {
                 completion(.failure(err))
                 print(err.localizedDescription)
@@ -54,7 +65,7 @@ struct Service {
                 guard let data = data else { return }
                 let jsonString = String(decoding: data, as: UTF8.self)
                 do {
-                    let results = try JSONDecoder().decode(CreateEmployeeModel.self, from: jsonString.data(using: .utf8)!)
+                    let results = try JSONDecoder().decode(T.self, from: jsonString.data(using: .utf8)!)
                     completion(.success(results))
                 } catch {
                     print(error.localizedDescription)
@@ -64,14 +75,12 @@ struct Service {
             }.resume()
     }
     
-    //MARK: - DELETE
-    func deleteEmployeeAPI(employeeID: Int, completion: @escaping (Result<DeleteEmployeeModel, Error>) -> Void) {
-        let urlString = "\(Constants.BaseURL.url)\(Constants.API.deleteEmployee)/\(employeeID)"
-        guard let serviceURL = URL.init(string: urlString) else { return }
-        var request = URLRequest(url: serviceURL)
-        request.httpMethod = Constants.delete
-        request.addValue(Constants.applicationJson, forHTTPHeaderField: Constants.contentType)
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+    private func postRequest<T: Decodable>(requestUrl: URL, requestBody: Data, resultType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+        var urlRequest = URLRequest(url: requestUrl)
+        urlRequest.httpMethod = RequestType.post.rawValue
+        urlRequest.httpBody = requestBody
+        urlRequest.addValue(Constants.applicationJson, forHTTPHeaderField: Constants.contentType)
+        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if let err = error {
                 completion(.failure(err))
                 print(err.localizedDescription)
@@ -79,7 +88,7 @@ struct Service {
                 guard let data = data else { return }
                 let jsonString = String(decoding: data, as: UTF8.self)
                 do {
-                    let results = try JSONDecoder().decode(DeleteEmployeeModel.self, from: jsonString.data(using: .utf8)!)
+                    let results = try JSONDecoder().decode(T.self, from: jsonString.data(using: .utf8)!)
                     completion(.success(results))
                 } catch {
                     print(error.localizedDescription)

@@ -95,9 +95,9 @@ extension AddEmployeeViewController: UITextFieldDelegate {
         if textField == nameTextField {
             addEmployeeVM.employeeName = nameTextField?.text ?? ""
         } else if (textField == ageTextField) {
-            addEmployeeVM.employeeAge = Int(ageTextField?.text ?? "") ?? 0
+            addEmployeeVM.employeeAge = ageTextField?.text ?? ""
         } else if (textField == salaryTextField) {
-            addEmployeeVM.employeeSalary = Int(salaryTextField?.text ?? "") ?? 0
+            addEmployeeVM.employeeSalary = salaryTextField?.text ?? ""
         }
         return true
     }

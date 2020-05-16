@@ -13,26 +13,26 @@ class AddEmployeeViewModel {
     //MARK: - Parameters
     
     var employeeName: String = ""
-    var employeeAge: Int = 0
-    var employeeSalary: Int = 0
+    var employeeAge: String = ""
+    var employeeSalary: String = ""
     
     //MARK: - Private Methods
     
     func validateEmployeeDetails() -> (Bool, String) {
         if employeeName.isEmpty {
             return(false, Constants.employeeNameError)
-        } else if (employeeAge == 0 || employeeAge <= 3) {
-            return(false, Constants.employeeAgeError)
-        } else if (employeeSalary == 0) {
-            return(false, Constants.employeeSalaryError)
+        } else if (employeeAge.isEmpty || employeeAge.count > 2) {
+            return(false, employeeAge.isEmpty ? Constants.employeeAgeEmptyError : Constants.employeeAgeError)
+        } else if (employeeSalary.isEmpty || employeeSalary.count > 8) {
+            return(false, employeeSalary.isEmpty ? Constants.employeeSalaryEmptyError : Constants.employeeSalaryError)
         }
         return (true, "")
     }
     
     func resetModel() {
         employeeName = ""
-        employeeAge = 0
-        employeeSalary = 0
+        employeeAge = ""
+        employeeSalary = ""
     }
     
     //MARK: - API
