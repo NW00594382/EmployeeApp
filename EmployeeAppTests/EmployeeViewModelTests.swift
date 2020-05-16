@@ -12,6 +12,7 @@ import XCTest
 class EmployeeViewModelTests: XCTestCase {
     
     var employeeVM = EmployeesViewModel()
+    let service = Service()
     
     override func setUp() {
         let bundle = Bundle.main.url(forResource: "Employees", withExtension: "json")
@@ -19,6 +20,20 @@ class EmployeeViewModelTests: XCTestCase {
         let results = try! JSONDecoder().decode(EmployeeModel.self, from: jsonData)
         employeeVM.originalArray = results.data
         employeeVM.employeesArray = employeeVM.originalArray
+    }
+    
+    func testGetEmployeesAPI() {
+        let expectation = self.expectation(description: "Valid API response wil receieve.")
+        employeeVM.getEmployeeData { (result) in
+            switch(result) {
+            case .success(let result):
+                XCTAssertNotNil(result)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 7, handler: nil)
     }
     
     func testEmployeeViewModelArraysCount() {
@@ -77,6 +92,7 @@ class EmployeeViewModelTests: XCTestCase {
         XCTAssertEqual(searchedResult.employeeAge, "43")
         XCTAssertEqual(searchedResult.employeeSalary, "313500")
     }
+    
     
     override func tearDown() {
         employeeVM.originalArray = []
