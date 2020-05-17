@@ -30,6 +30,7 @@ class EmployeesCell: UITableViewCell {
     ///   - viewModel: This parameter is to access employeesArray from ViewModel
     ///   - indexPath: IndexPath of tableView to display perticular row info
     func configureCell(viewModel: EmployeesViewModel, indexPath: IndexPath) {
+        self.accessibilityIdentifier = "CellIndentifier_\(indexPath.row)"
         let employee = viewModel.employeesArray[indexPath.row]
         employeeImageView.imageFromServerURL(employee.profileImage, placeHolder: #imageLiteral(resourceName: "placeholder"))
         employeeNameLabel.text = employee.employeeName

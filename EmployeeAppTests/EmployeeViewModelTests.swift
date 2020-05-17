@@ -23,7 +23,7 @@ class EmployeeViewModelTests: XCTestCase {
     }
     
     func testGetEmployeesAPI() {
-        let expectation = self.expectation(description: "Valid API response wil receieve.")
+        let expectation = self.expectation(description: "Valid API response will received.")
         employeeVM.getEmployeeData { (result) in
             switch(result) {
             case .success(let result):

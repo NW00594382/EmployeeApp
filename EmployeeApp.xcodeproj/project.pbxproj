@@ -11,13 +11,13 @@
 		521B75E5246ADF36002C644E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521B75E3246ADF36002C644E /* Main.storyboard */; };
 		521B75E7246ADF3D002C644E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521B75E6246ADF3D002C644E /* Assets.xcassets */; };
 		521B75EA246ADF3D002C644E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521B75E8246ADF3D002C644E /* LaunchScreen.storyboard */; };
-		521B7600246ADF3D002C644E /* EmployeeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B75FF246ADF3D002C644E /* EmployeeAppUITests.swift */; };
 		521B7617246D4D4F00FCC154 /* DeleteEmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B7616246D4D4F00FCC154 /* DeleteEmployeeModel.swift */; };
 		521B761A246FC3F700FCC154 /* Employees.json in Resources */ = {isa = PBXBuildFile; fileRef = 521B7619246FC3F600FCC154 /* Employees.json */; };
 		521B761B246FC3F700FCC154 /* Employees.json in Resources */ = {isa = PBXBuildFile; fileRef = 521B7619246FC3F600FCC154 /* Employees.json */; };
 		521B761C246FC3F700FCC154 /* Employees.json in Resources */ = {isa = PBXBuildFile; fileRef = 521B7619246FC3F600FCC154 /* Employees.json */; };
 		521B761E246FC4EE00FCC154 /* EmployeeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B761D246FC4ED00FCC154 /* EmployeeViewModelTests.swift */; };
 		521B762324700E3300FCC154 /* AddEmployeeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B762224700E3300FCC154 /* AddEmployeeViewModelTests.swift */; };
+		521B762524716B4B00FCC154 /* EmployeesViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B762424716B4A00FCC154 /* EmployeesViewControllerUITests.swift */; };
 		76882718246AE03500C18747 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882717246AE03500C18747 /* Constants.swift */; };
 		7688271A246AE05E00C18747 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882719246AE05E00C18747 /* UIColor+Extension.swift */; };
 		76882726246AECAB00C18747 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882725246AECAB00C18747 /* Service.swift */; };
@@ -58,12 +58,12 @@
 		521B75F0246ADF3D002C644E /* EmployeeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		521B75F6246ADF3D002C644E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		521B75FB246ADF3D002C644E /* EmployeeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		521B75FF246ADF3D002C644E /* EmployeeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAppUITests.swift; sourceTree = "<group>"; };
 		521B7601246ADF3D002C644E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		521B7616246D4D4F00FCC154 /* DeleteEmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteEmployeeModel.swift; sourceTree = "<group>"; };
 		521B7619246FC3F600FCC154 /* Employees.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Employees.json; sourceTree = "<group>"; };
 		521B761D246FC4ED00FCC154 /* EmployeeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModelTests.swift; sourceTree = "<group>"; };
 		521B762224700E3300FCC154 /* AddEmployeeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewModelTests.swift; sourceTree = "<group>"; };
+		521B762424716B4A00FCC154 /* EmployeesViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewControllerUITests.swift; sourceTree = "<group>"; };
 		76882717246AE03500C18747 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76882719246AE05E00C18747 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		76882725246AECAB00C18747 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 		521B75FE246ADF3D002C644E /* EmployeeAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				521B75FF246ADF3D002C644E /* EmployeeAppUITests.swift */,
 				521B7601246ADF3D002C644E /* Info.plist */,
+				521B762424716B4A00FCC154 /* EmployeesViewControllerUITests.swift */,
 			);
 			path = EmployeeAppUITests;
 			sourceTree = "<group>";
@@ -409,7 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521B7600246ADF3D002C644E /* EmployeeAppUITests.swift in Sources */,
+				521B762524716B4B00FCC154 /* EmployeesViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
