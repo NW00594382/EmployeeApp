@@ -14,14 +14,13 @@ class EmployeesViewModel {
     
     var originalArray = [Employee]()
     var employeesArray = [Employee]()
-    var searchedArray = [Employee]()
     
     //MARK: - Private Methods
     
     func searchEmployee(with searchText: String, completion: @escaping () -> Void) {
         if !searchText.isEmpty {
-            searchedArray = self.originalArray
-            self.employeesArray = searchedArray.filter({ $0.employeeName.lowercased().contains(searchText.lowercased())})
+            employeesArray = self.originalArray
+            self.employeesArray = employeesArray.filter({ $0.employeeName.lowercased().contains(searchText.lowercased())})
         } else {
             self.employeesArray = self.originalArray
         }

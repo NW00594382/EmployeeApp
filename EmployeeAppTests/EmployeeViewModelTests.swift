@@ -36,10 +36,10 @@ class EmployeeViewModelTests: XCTestCase {
         self.waitForExpectations(timeout: 7, handler: nil)
     }
     
-    func testEmployeeViewModelArraysCount() {
-        XCTAssertEqual(employeeVM.originalArray.count, 24)
-        XCTAssertEqual(employeeVM.employeesArray.count, 24)
-        XCTAssertEqual(employeeVM.searchedArray.count, 0)
+    func testEmployeeViewModelCheckOriginalAndEmployeeArrayIsEqual() {
+        let originalArray = employeeVM.originalArray.count
+        let employeeArray = employeeVM.employeesArray.count
+        XCTAssertEqual(employeeArray, originalArray)
     }
     
     func testEmployeeDataNotNil() {
@@ -97,6 +97,5 @@ class EmployeeViewModelTests: XCTestCase {
     override func tearDown() {
         employeeVM.originalArray = []
         employeeVM.employeesArray = []
-        employeeVM.searchedArray = []
     }
 }

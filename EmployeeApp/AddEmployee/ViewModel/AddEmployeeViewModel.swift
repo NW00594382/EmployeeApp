@@ -18,9 +18,17 @@ class AddEmployeeViewModel {
     
     //MARK: - Private Methods
     
+    func isInValidInput(nameString: String) -> Bool {
+        let regex = try? NSRegularExpression(pattern: Constants.nameRegularExpression, options: [])
+        if regex!.firstMatch(in: nameString, options: [], range: NSMakeRange(0, nameString.count)) != nil {
+            return true
+        }
+        return false
+    }
+    
     func validateEmployeeDetails() -> (Bool, String) {
-        if employeeName.isEmpty {
-            return(false, Constants.employeeNameError)
+        if employeeName.isEmpty || isInValidInput(nameString: employeeName) {
+            return(false, employeeName.isEmpty ? Constants.employeeNameError : Constants.employeeNameInValidError)
         } else if (employeeAge.isEmpty || employeeAge.count > 2) {
             return(false, employeeAge.isEmpty ? Constants.employeeAgeEmptyError : Constants.employeeAgeError)
         } else if (employeeSalary.isEmpty || employeeSalary.count > 8) {
