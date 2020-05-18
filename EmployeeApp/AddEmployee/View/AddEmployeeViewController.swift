@@ -35,6 +35,9 @@ class AddEmployeeViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(self.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        nameTextField.accessibilityIdentifier = Constants.nameTextFieldIndentifier
+        ageTextField.accessibilityIdentifier = Constants.ageTextFieldIndentifier
+        salaryTextField.accessibilityIdentifier = Constants.salaryTextFieldIndentifier
     }
     
     /// This method is to setup Activity indicator
@@ -66,7 +69,7 @@ class AddEmployeeViewController: UIViewController {
             switch(result) {
             case .success:
                 self.clearAll()
-                self.showAlert(title: Constants.success, message: "Employee record added successfully.", action: UIAlertAction(title: Constants.ok, style: .default, handler: nil))
+                self.showAlert(title: Constants.success, message: Constants.submitSuccessMessage, action: UIAlertAction(title: Constants.ok, style: .default, handler: nil))
                 
             case .failure(let error):
                 self.showAlert(title: Constants.errorTitle, message: error.localizedDescription, action: UIAlertAction(title: Constants.ok, style: .default, handler: nil))

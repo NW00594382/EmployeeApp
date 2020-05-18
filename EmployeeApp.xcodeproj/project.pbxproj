@@ -18,6 +18,9 @@
 		521B761E246FC4EE00FCC154 /* EmployeeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B761D246FC4ED00FCC154 /* EmployeeViewModelTests.swift */; };
 		521B762324700E3300FCC154 /* AddEmployeeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B762224700E3300FCC154 /* AddEmployeeViewModelTests.swift */; };
 		521B762524716B4B00FCC154 /* EmployeesViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B762424716B4A00FCC154 /* EmployeesViewControllerUITests.swift */; };
+		521DAD9724723D9400BF9E3F /* AddEmployeeViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DAD9624723D9300BF9E3F /* AddEmployeeViewControllerUITests.swift */; };
+		521DAD9824724FDE00BF9E3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882717246AE03500C18747 /* Constants.swift */; };
+		521DAD9924724FDE00BF9E3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882717246AE03500C18747 /* Constants.swift */; };
 		76882718246AE03500C18747 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882717246AE03500C18747 /* Constants.swift */; };
 		7688271A246AE05E00C18747 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882719246AE05E00C18747 /* UIColor+Extension.swift */; };
 		76882726246AECAB00C18747 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76882725246AECAB00C18747 /* Service.swift */; };
@@ -64,6 +67,7 @@
 		521B761D246FC4ED00FCC154 /* EmployeeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModelTests.swift; sourceTree = "<group>"; };
 		521B762224700E3300FCC154 /* AddEmployeeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewModelTests.swift; sourceTree = "<group>"; };
 		521B762424716B4A00FCC154 /* EmployeesViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewControllerUITests.swift; sourceTree = "<group>"; };
+		521DAD9624723D9300BF9E3F /* AddEmployeeViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewControllerUITests.swift; sourceTree = "<group>"; };
 		76882717246AE03500C18747 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76882719246AE05E00C18747 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		76882725246AECAB00C18747 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				521B7601246ADF3D002C644E /* Info.plist */,
 				521B762424716B4A00FCC154 /* EmployeesViewControllerUITests.swift */,
+				521DAD9624723D9300BF9E3F /* AddEmployeeViewControllerUITests.swift */,
 			);
 			path = EmployeeAppUITests;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 			files = (
 				521B761E246FC4EE00FCC154 /* EmployeeViewModelTests.swift in Sources */,
 				521B762324700E3300FCC154 /* AddEmployeeViewModelTests.swift in Sources */,
+				521DAD9824724FDE00BF9E3F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +415,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521DAD9724723D9400BF9E3F /* AddEmployeeViewControllerUITests.swift in Sources */,
 				521B762524716B4B00FCC154 /* EmployeesViewControllerUITests.swift in Sources */,
+				521DAD9924724FDE00BF9E3F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,10 +37,8 @@ class EmployeesViewController: UIViewController {
     func setUpInitialView() {
         self.view.backgroundColor = UIColor.themeColor
         addActivityIndicator()
-        searchBar.isAccessibilityElement = true
-        view.isAccessibilityElement = true
-        employeeTableView.isAccessibilityElement = true
-        employeeTableView.accessibilityIdentifier = "EmployeeTableViewIndentifier"
+        searchBar.accessibilityIdentifier = Constants.searchBarIndentifier
+        employeeTableView.accessibilityIdentifier = Constants.employeeTableViewIndentifier
     }
     
     /// This method is to setup Activity indicator
